@@ -26,7 +26,7 @@ public class Race {
 			racers.add(thread);
 		}
 		
-		System.out.println("Prioridade minima: Racers 1,2,3\nPrioridade normal: Racers 4,5,6,7\nPrioridade máxima: racers 8,9,10");
+		
 		for(Thread a : racers) {
 			a.start();
 		}
