@@ -2,7 +2,7 @@ package Racers;
 
 public class RacerRunnable implements Runnable{
 	private int i;
-	private static final int MAX_PRINTS = 10;
+	private static final int MAX_PRINTS = 1000;
 	
 	public RacerRunnable(int i) {
 		this.i = i;
