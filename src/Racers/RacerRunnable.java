@@ -2,6 +2,7 @@ package Racers;
 
 public class RacerRunnable implements Runnable{
 	private int i;
+	private static final int MAX_PRINTS = 10;
 	
 	public RacerRunnable(int i) {
 		this.i = i;
@@ -9,14 +10,15 @@ public class RacerRunnable implements Runnable{
 	
 	@Override
 	public void run() {
-		while(true) {
-			System.out.println("Racer Runnable "+i+" imprimindo");
+		for(int count = 1; count <= MAX_PRINTS; count++) {
+			System.out.println("Racer Runnable "+i+" imprimindo "+count+"/"+MAX_PRINTS);
 			
 			try {
-				Thread.sleep(10);
+				Thread.sleep(1);
 			}catch(InterruptedException e) {
 				e.printStackTrace();
 			}
 		}
+		System.out.println("Racer "+i+" FINALIZOU");
 	}
 }
